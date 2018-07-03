@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        position: relative;
+    }
+
+    .gold {
+        width: 20px;
+        height: 20px;
+        /* background: pink; */
+        border-radius: 50%;
+        position: absolute;
+        background: url("./timg.jpg");
+        background-size: 100%;
+        top: -100px;
+        left: 100px;
+        transform: scale(2) rotateY(0);
+        opacity: 10;
+        animation: animation 2s infinite;
+    }
+
+    @keyframes animation {
+        0% {}
+        25% {
+            transform: scale(1) rotateY(180deg);
+            opacity: 5;
+        }
+        50% {
+            transform: scale(1) rotateY(-180deg);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(0) rotateY(0);
+            opacity: 0;
+            top: 200px;
+            left:200px;
+        }
+    }
+</style>
+
+<body>
+</body>
+<script>
+    var gold = document.querySelector(".yuan");
+    var num = 0;
+
+    function random(max, min) {
+        return num = Math.floor(Math.random() * (max - min) + min)
+    }
+    random(20, 10)
+    var arr = [];
+    for (var i = 0; i < num; i++) {
+        arr.push(i)
+    }
+    console.log(arr)
+
+    function createDom() {
+        for (var i = 0; i < arr.length; i++) {
+            var div = document.createElement("div");
+            div.className = "gold"
+            div.style.left = random(i, 0) * 50 + "px";
+            // div.style.top = random(i, 0) * 10 + "px";
+            div.style.animationDelay =random(i,0)+"s"
+            document.body.appendChild(div) 
+        }
+    }
+    createDom()
+    // setInterval(function(){
+    //     createDom();
+    // },3000)
+</script>
+
+</html>
