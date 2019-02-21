@@ -41,28 +41,15 @@
     }
 
     .circle1 {
-        animation: animate1 1.5s infinite;
+        animation: animate1 1.5s linear infinite;
     }
 
     .circle2 {
-        animation: animate1 1.5s 1s infinite;
+        animation: animate1 1.5s linear 1s infinite;
     }
 
     .circle3 {
-        animation: animate1 1.5s 2s infinite;
-    }
-
-    .point {
-        position: absolute;
-        left: 100px;
-        top: 140px;
-        transform: rotateZ(-30deg);
-        animation: animate2 1.5s infinite;
-        z-index: 2;
-    }
-
-    .point img {
-        width: 200px;
+        animation: animate1 1.5s linear 2s infinite;
     }
 
     @keyframes animate1 {
@@ -71,23 +58,14 @@
             opacity: 0;
         }
     }
-
-    @keyframes animate2 {
-        to {
-            transform: rotateZ(-30deg) translateY(-30px);
-        }
-    }
 </style>
 
 <body>
     <div class="wrap">
-        <div class="text">点这里</div>
+        <div class="text"></div>
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
         <div class="circle circle3"></div>
-        <!-- <div class="point">
-            <img src="./point.png" alt="">
-        </div> -->
     </div>
 </body>
 
