@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水波扩散效果</title>
+</head>
+<style>
+    .wrap {
+        margin: 100px 50%;
+        position: relative;
+    }
+
+    .text {
+        width: 200px;
+        height: 200px;
+        background: red;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 200px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        border: 6px solid #5c5c5c32;
+
+    }
+
+    .circle1 {
+        animation: animate1 1.5s infinite;
+    }
+
+    .circle2 {
+        animation: animate1 1.5s 1s infinite;
+    }
+
+    .circle3 {
+        animation: animate1 1.5s 2s infinite;
+    }
+
+    .point {
+        position: absolute;
+        left: 100px;
+        top: 140px;
+        transform: rotateZ(-30deg);
+        animation: animate2 1.5s infinite;
+        z-index: 2;
+    }
+
+    .point img {
+        width: 200px;
+    }
+
+    @keyframes animate1 {
+        to {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    @keyframes animate2 {
+        to {
+            transform: rotateZ(-30deg) translateY(-30px);
+        }
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="text">点这里</div>
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <!-- <div class="point">
+            <img src="./point.png" alt="">
+        </div> -->
+    </div>
+</body>
+
+</html>
