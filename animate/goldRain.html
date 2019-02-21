@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>金币雨</title>
 </head>
 <style>
     * {
@@ -34,19 +34,22 @@
 
     @keyframes animation {
         0% {}
+
         25% {
             transform: scale(1) rotateY(180deg);
             opacity: 5;
         }
+
         50% {
             transform: scale(1) rotateY(-180deg);
             opacity: 0;
         }
+
         100% {
             transform: scale(0) rotateY(0);
             opacity: 0;
             top: 200px;
-            left:200px;
+            left: 200px;
         }
     }
 </style>
@@ -73,8 +76,8 @@
             div.className = "gold"
             div.style.left = random(i, 0) * 50 + "px";
             // div.style.top = random(i, 0) * 10 + "px";
-            div.style.animationDelay =random(i,0)+"s"
-            document.body.appendChild(div) 
+            div.style.animationDelay = random(i, 0) + "s"
+            document.body.appendChild(div)
         }
     }
     createDom()
