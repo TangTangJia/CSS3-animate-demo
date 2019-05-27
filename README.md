@@ -5,3 +5,4 @@
 - 金币雨
 - 水波扩散效果
 - 正方体3D旋转 [查看效果](https://codepen.io/tangtangjia/pen/LaOBZR)
+- 使用box-shadow实现点点点loading效果 [查看效果](https://codepen.io/tangtangjia/pen/pmKbBR)

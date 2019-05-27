@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点点点loading效果</title>
+    <style>
+        span {
+            display: inline-block;
+            min-width: 2px;
+            min-height: 2px;
+            box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor;
+            animation: dot 4s infinite step-start both;
+        }
+
+        @keyframes dot {
+            25% {
+                box-shadow: none;
+                /* 0个点 */
+            }
+
+            50% {
+                box-shadow: 2px 0;
+                /* 1个点 */
+            }
+
+            75% {
+                box-shadow: 2px 0, 6px 0;
+                /* 2个点 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span></span>
+</body>
+
+</html>
